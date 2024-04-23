@@ -7,8 +7,8 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "inlineTemplate": true,
-          "inlineStyle": true,
+          "inlineTemplate": false,
+          "inlineStyle": false,
           "skipTests": true,
           "standalone": false
         },
@@ -55,9 +55,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "@angular/material/prebuilt-themes/purple-green.css",
+              "src/styles.css",
+              "node_modules\\bootstrap\\dist\\css\\bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules\\bootstrap\\dist\\js\\bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
